@@ -10,19 +10,15 @@ services:
     image: voting-app
     ports:
       - 5000:80
-    links:
-      - redis
+   
 
   worker:
     image: worker-app
-    links:
-      - db
-      - redis
+   
 
   result:
     image: result-app
     ports:
      - 5001:80
-    links:
-     - db
+   
       
